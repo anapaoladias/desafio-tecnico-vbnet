@@ -23,7 +23,7 @@
         <hr />
 
         <h4>Empresas Vinculadas</h4>
-        <asp:GridView ID="GridViewEmpresas" runat="server" AutoGenerateColumns="False" OnRowDataBound="GridViewEmpresas_RowDataBound" RowStyle-BorderWidth="1">
+        <asp:GridView ID="GridViewEmpresas" runat="server" AutoGenerateColumns="False" RowStyle-BorderWidth="1">
             <Columns>
                 <asp:BoundField DataField="Id" HeaderText="ID" SortExpression="Id" />
                 <asp:BoundField DataField="Nome" HeaderText="Nome" SortExpression="Nome" />

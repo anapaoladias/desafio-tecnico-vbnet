@@ -43,9 +43,5 @@ Namespace Associados
             Response.Redirect("Lista.aspx")
         End Sub
 
-        Protected Sub GridViewEmpresas_RowDataBound(sender As Object, e As GridViewRowEventArgs) Handles GridViewEmpresas.RowDataBound
-            '
-        End Sub
-
     End Class
 End Namespace

@@ -144,7 +144,7 @@ Public Class EmpresaRepo
             Dim sql As String = "
                 select a.Id, a.Nome, a.CPF, a.DataNascimento
                 from Associado a
-                join Empresa_Empresa ea on a.Id = ea.AssociadoId
+                join Empresa_Associado ea on a.Id = ea.AssociadoId
                 where ea.EmpresaId = @EmpresaId
                 "
             Dim parametro As New SqlParameter("@EmpresaID", EmpresaID)
