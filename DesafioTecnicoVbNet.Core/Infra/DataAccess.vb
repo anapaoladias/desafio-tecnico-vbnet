@@ -36,13 +36,6 @@ Public Class DataAccess
             transaction.Rollback()
         End If
     End Sub
-    'Public Function GetDataSet(sql As String) As DataSet
-    '    Dim dataSet As New DataSet()
-    '    Using adapter As New SqlDataAdapter(sql, connection)
-    '        adapter.Fill(dataSet)
-    '    End Using
-    '    Return dataSet
-    'End Function
 
     Public Function GetDataSet(sql As String, parametros As List(Of SqlParameter)) As DataSet
         Dim dataSet As New DataSet()
@@ -71,12 +64,6 @@ Public Class DataAccess
     End Function
 
 
-    'Public Function ExecuteNonQuery(sql As String) As Integer
-    '    Using command As New SqlCommand(sql, connection, transaction)
-    '        Return command.ExecuteNonQuery()
-    '    End Using
-    'End Function
-
     Public Function ExecuteNonQuery(sql As String, parametros As List(Of SqlParameter)) As Integer
         Using command As New SqlCommand(sql, connection, transaction)
             For Each parametro In parametros
@@ -86,23 +73,12 @@ Public Class DataAccess
         End Using
     End Function
 
-    'Public Function ExecuteScalar(sql As String) As Object
-    '    Using command As New SqlCommand(sql, connection, transaction)
-    '        Return command.ExecuteScalar()
-    '    End Using
-    'End Function
-
     Public Function ExecuteScalar(sql As String, parametros As List(Of SqlParameter)) As Integer
         Using command As New SqlCommand(sql, connection, transaction)
             command.Parameters.AddRange(parametros.ToArray())
             Return command.ExecuteScalar()
         End Using
     End Function
-
-    'Public Function ExecuteReader(sql As String) As SqlDataReader
-    '    Dim command As New SqlCommand(sql, connection, transaction)
-    '    Return command.ExecuteReader()
-    'End Function
 
     Public Sub CloseConnection()
         If connection IsNot Nothing AndAlso connection.State = ConnectionState.Open Then
