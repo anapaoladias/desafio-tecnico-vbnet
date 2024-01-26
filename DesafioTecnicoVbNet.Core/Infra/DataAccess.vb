@@ -37,23 +37,6 @@ Public Class DataAccess
         End If
     End Sub
 
-    Public Function GetDataSet(sql As String, parametros As List(Of SqlParameter)) As DataSet
-        Dim dataSet As New DataSet()
-        Using adapter As New SqlDataAdapter(sql, connection)
-            adapter.SelectCommand.Parameters.AddRange(parametros.ToArray())
-            adapter.Fill(dataSet)
-        End Using
-        Return dataSet
-    End Function
-
-    Public Function GetDataTable(sql As String) As DataTable
-        Dim dataTable As New DataTable()
-        Using adapter As New SqlDataAdapter(sql, connection)
-            adapter.Fill(dataTable)
-        End Using
-        Return dataTable
-    End Function
-
     Public Function GetDataTable(sql As String, parametros As List(Of SqlParameter)) As DataTable
         Dim dataTable As New DataTable()
         Using adapter As New SqlDataAdapter(sql, connection)
