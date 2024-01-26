@@ -7,12 +7,6 @@ GO
 USE DesafioTecnicoVbNet;
 GO
 
-/*
-drop table Empresa_Associado;
-drop table Empresa;
-drop table Associado;
-*/
-
 CREATE TABLE Empresa (
     Id INT PRIMARY KEY IDENTITY,
     Nome VARCHAR(200) NOT NULL,

@@ -11,7 +11,7 @@
             </div>
             <div class="col-md-4">
                 <label for="txtFiltroCNPJ">CNPJ:</label>
-                <asp:TextBox ID="txtFiltroCNPJ" runat="server" CssClass="form-control" MaxLength="11"></asp:TextBox>
+                <asp:TextBox ID="txtFiltroCNPJ" runat="server" CssClass="form-control" MaxLength="14"></asp:TextBox>
             </div>
 
         </div>
